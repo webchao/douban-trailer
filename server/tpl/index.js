@@ -1,4 +1,4 @@
 module.exports = {
-    normal: require('./html'),
-    ejs: require('ejs')
+    htmlTpl: require('./html'),
+    ejsTlp: require('./ejs')
 }

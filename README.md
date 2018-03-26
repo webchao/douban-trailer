@@ -19,7 +19,7 @@ app.use(views(resolve(__dirname, './views'), {
 
 >异步操作使用 await
 ```js
-/*server/index.js */
+// server/index.js 
 app.use(async (ctx, next) => {
     await ctx.render('index', {
         you: 'luke',
@@ -27,8 +27,9 @@ app.use(async (ctx, next) => {
     })
     })
 ```  
->在 view 文件夹下使用 pug 模板引擎构建 html 
+>在 存放模板指定文件夹下使用模板引擎构建 html 
 ```pug
+<!-- view/index.js -->
 DOCTYPE
 html
     head

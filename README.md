@@ -9,7 +9,7 @@ npm i pug -S
 ```
 ## 使用views 结合 pug
 
-只要是在views文件夹下的pug模板文件，都会被识别成并解析成html
+>只要是在views文件夹下的pug模板文件，都会被识别成并解析成html
 ```js
 /*server/index.js */
 app.use(views(resolve(__dirname, './views'), {
@@ -17,7 +17,7 @@ app.use(views(resolve(__dirname, './views'), {
 })) 
 ```
 
-异步操作使用 await
+>异步操作使用 await
 ```js
 /*server/index.js */
 app.use(async (ctx, next) => {
@@ -27,7 +27,7 @@ app.use(async (ctx, next) => {
     })
     })
 ```  
-在 view 文件夹下使用 pug 模板引擎构建 html 
+>在 view 文件夹下使用 pug 模板引擎构建 html 
 ```pug
 DOCTYPE
 html

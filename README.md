@@ -1,8 +1,12 @@
 # 使用views 结合 pug的总结
 ## 安装 views
-`npm i views -S`
+```npm
+npm i views -S
+```
 
-`npm i pug -S`
+```npm
+npm i pug -S
+```
 ## 使用views 结合 pug
 
 只要是在views文件夹下的pug模板文件，都会被识别成并解析成html

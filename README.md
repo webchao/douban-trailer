@@ -27,7 +27,7 @@ app.use(async (ctx, next) => {
     })
     })
 ```  
-在view文件夹下使用pug模板引擎构建html
+在 view 文件夹下使用 pug 模板引擎构建 html 
 ```pug
 DOCTYPE
 html

@@ -15,5 +15,5 @@ html
                     h1 Hi #{you}s
                     p This is  #{me}
                 .col-md-4
-                    p 测试动态的pug的模板引擎
+                    p (测试动态的pug的模板引擎)
 `

@@ -27,7 +27,7 @@ app.use(async (ctx, next) => {
     })
     })
 ```  
->在 存放模板指定文件夹下使用模板引擎构建 html 
+>在存放模板指定文件夹下使用模板引擎构建 html 
 ```pug
 <!-- view/index.js -->
 DOCTYPE

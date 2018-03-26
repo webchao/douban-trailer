@@ -72,6 +72,7 @@ html
 
 ### script
 ```pug
+<!-- ../includes/script.pug -->
 script(src='https://cdn.bootcss.com/jquery/3.3.1/jquery.js')        
 script(src='https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js')
 ```

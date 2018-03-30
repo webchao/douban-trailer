@@ -1,6 +1,7 @@
-import React from 'react'
-import { render } from 'react-dom'
-import App from './app'
+
+import React from 'react';
+import { render } from 'react-dom';
+import App from './app';
 
 class AppContainer extends React.Component {
     constructor() {
@@ -16,17 +17,7 @@ class AppContainer extends React.Component {
     }
 
     render() {
-
-        return (
-            <div className="shopping-list">
-                <h1>Shopping List for {this.props.name}</h1>
-                <ul>
-                    <li>Instagram</li>
-                    <li>WhatsApp</li>
-                    <li>Oculus</li>
-                </ul>
-            </div>
-        );
+        return (<App name={this.state.name} />);
     }
 }
 

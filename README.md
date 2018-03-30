@@ -137,3 +137,21 @@ const options = {
 ```shell
 parcel build parcel/index.html --no-cache -d parcel/dist  --public-url /dist/
 ```
+## 打包react方法
+>配置.babekrc
+```shell
+{
+  "presets": ["env", "stage-0", "react"],
+  "plugins": [
+    "transform-runtime",
+    "transform-decorators-legacy",
+    "transform-class-properties"
+  ]
+}
+```
+>安装相关的react模块
+```shell
+npm i babel-preset-env babel-preset-stage-0 babel-preset-react babel-plugin-transform-runtime babel-plugin-transform-decorators-legacy -S
+
+npm i react react-demo -S
+```

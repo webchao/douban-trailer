@@ -187,3 +187,54 @@ const puppeteer = require('puppeteer');
   await browser.close();
 })();
 ```
+child_process
+给予模块提供了衍生子进程的功能
+
+
+```js
+/*movie.js*/
+/*调用path.resolve方法，将路径转化成绝对路径srcipt
+ *将主进程文件导入给子进程 srcipt
+ *触发不同的进程事件监听进程
+ **/
+const cp = require('child_process');
+const {
+    resolve
+} = require('path'); //调用path.resolve
+(async () => {
+    const srcipt = resolve(__dirname, '../crawler/trailer-list.js'); //将相对路径转成绝对路径
+
+    const child = cp.fork(srcipt, []);
+    //console.log(child, '子进程');
+    let invoked = false;
+    child.on('error', err => {
+        if (invoked) return
+        invoked = true;
+        console.log(err, 'error');
+    })
+
+    child.on('exit', code => {
+        if (invoked) return
+        invoked = true;
+        let err = code === 0 ? null : new Error('exit code ' + code);
+        console.log(err, 'exit');
+    })
+    child.on('message', data => {
+        let result = data.result;
+        console.log(result, 'message')
+    })
+
+
+
+})()
+```
+
+```js
+//trailer-list.js
+//允许子进程发送消息回父进程
+   process.send({
+        result
+    })
+//以结束状态码code指示Node.js同步终止进程。
+    process.exit(0)
+```
